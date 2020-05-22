@@ -1,38 +1,56 @@
-.App {
+.container-fluid {
+  width: 100vw;
+  height: 100vh;
+  background-color: lavenderblush;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#box {
+  height: 500px;
+  width: 380px;
+  background-color: rgb(49, 49, 51);
+  display: inline-block;
+  margin-top: 7%;
+  
+
+}
+@font-face {
+  font-family: digital;
+  src: url(DIGITALDREAMFATSKEW.ttf)
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#display {
+  width: 336px;
+  height: 65px;
+  background-color: lightskyblue;
+  display: inline-block;
+  margin-top: 3%;
+  margin-bottom: 6%;
+  padding-top: 5%;
+  padding-right: 2%;
+  text-align: right;
+  font-family: digital;
+  font-size: 25px;
+  overflow-y: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.calc {
+  border-radius: 3%;
+  height: 70px;
+  display: inline-block;
+  
+  width: 45px;
+  margin: 1% 2%;
+  font-weight: 700;
+  box-shadow: 0 0 2px rgb(36, 226, 240);
 }
 
-.App-link {
-  color: #61dafb;
+.buttons {
+  width: 80%;
+  display: inline-block;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
+
+
