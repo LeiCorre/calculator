@@ -1,9 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './App.css';
-import {
-  atan2, chain, derivative, e, evaluate, log, pi, pow, round, sqrt
-} from 'mathjs'
+import { evaluate } from 'mathjs'
 
 
 
@@ -33,8 +31,14 @@ import {
      this.divC = this.divC.bind(this)
      this.equals = this.equals.bind(this)
      this.clear = this.clear.bind(this)
+     
+     
 
    }
+
+   
+
+
 
    oneC(event) {
      const value = this.state.equation.toString()
@@ -88,7 +92,7 @@ import {
    
    decC(event) {
      const value = this.state.equation;
-     if (!value.includes(".")) 
+     if (/^(\d+)$|[+\-*/]\d*$/.test(value)) 
      this.setState({equation: value + '.'})
    }
 
@@ -103,7 +107,8 @@ import {
    plusC(event) {
     const value = this.state.equation.toString()
     
-    this.setState({ equation: value.replace(/\D$/, '') + "+" });
+    
+    this.setState({ equation: value.replace(/\D+$/, '') + "+" });
     
     }
 
@@ -113,7 +118,7 @@ import {
    minusC(event) {
     const value = this.state.equation.toString()
     
-    this.setState({ equation: value.replace(/\D$/, '') + "-" });
+    this.setState({ equation: value.replace(/\DD$/, '') + "-"  });
 
    }
    
@@ -121,14 +126,14 @@ import {
      
     const value = this.state.equation.toString()
     
-    this.setState({ equation: value.replace(/\D$/, '') + "*" });
+    this.setState({ equation: value.replace(/\D+$/, '') + "*" });
     
    }
    
    divC(event) {
     const value = this.state.equation.toString()
     
-    this.setState({ equation: value.replace(/\D$/, '') + "/" });
+    this.setState({ equation: value.replace(/\D+$/, '') + "/" });
       
    }
    
@@ -141,11 +146,14 @@ import {
    }
 
    
+
+   
    
    
    render() {
      return (
        <div className="container-fluid">
+         
          <div id="box">
            <div id="display">{this.state.equation}</div>
            <div className="buttons">
@@ -181,15 +189,16 @@ import {
               
            <div className='row'>
              <button className="col btn btn-info calc" id="zero" onClick={this.zeroC}>0</button>
-             <button className="col btn btn-info calc" id="power">On/Off</button>
+             
              </div>
              
              </div>
-
+          
             
              
           </div> 
-
+          <h6>Designed & Coded by Lei Corre &hearts;</h6>
+          <h5>Digital Dream font by Jakob Fischer @ <a href="http://pizzadude.dk/site/">Pizzadude.dk</a></h5>
           
              
              

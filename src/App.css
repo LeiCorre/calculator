@@ -10,13 +10,19 @@
   width: 380px;
   background-color: rgb(49, 49, 51);
   display: inline-block;
-  margin-top: 7%;
+  margin-top: 4%;
+  margin-bottom: 1%;
   
 
 }
 @font-face {
   font-family: digital;
   src: url(DIGITALDREAMFATSKEW.ttf)
+}
+
+h6 {
+  font-family: digital;
+  font-weight: 700
 }
 
 #display {
